@@ -1,8 +1,8 @@
 version: '3.8'
 
 services:
-  postgres:
-    image: postgres:13
+  database:
+    image: postgres:13.0-alpine
     container_name: playlist_postgres
     restart: always
     environment:

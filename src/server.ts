@@ -7,6 +7,9 @@ const app = express();
 
 app.use(express.json());
 
+// Set Default Timezone
+process.env.TZ = process.env.TIMEZONE || 'America/Sao_Paulo';
+
 // Fetches all artists
 app.get('/artists', async (_, response) => {
   const artists = await prisma.artist.findMany();
